@@ -1,0 +1,65 @@
+@charset "UTF-8";
+
+.navbar {
+	font-size: 20px;
+	font-family: "Montserrat", sans-serif;
+	font-weight: 400;
+}
+.search {
+	font-size: 16px;
+	font-family: "Montserrat", sans-serif;
+}
+.btn:focus {
+    outline: 0;
+    outline-color: transparent;
+    outline-width: 0;
+    outline-style: none;
+    box-shadow: 0 0 0 0 rgba(0,123,255,0);
+}
+.btn-login {
+	background-color: none;
+	border: none;
+	color: white;
+	padding: 6px 20px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+    transition-duration: 0.4s;
+}
+.btn-rad {
+	border-radius: 8px;
+}
+
+.btn-rad1 {
+	border-radius: 12px;
+}
+.button1 {
+	color: none;
+    padding: 6px 20px;
+	text-align: center;
+	border: none;
+    transition-duration: 0.4s;
+}
+
+
+.button1:hover {
+	background-color: orange;
+}
+
+.transition {
+	transition: width 1s;
+}
+
+.transition:hover {
+	width: 200px;
+  }
+
+.gradient {
+		background-image: linear-gradient(to right, #FDC830 , #F37335);
+}
+
+.btn:focus, .btn:active, link {
+	outline: none !important;
+	box-shadow: none !important;
+  }
