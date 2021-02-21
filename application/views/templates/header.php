@@ -7,6 +7,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/style.css">
 
+    <!-- Favicon -->
     <link rel="shortcut icon" type="image" href="<?php echo base_url(); ?>assets/favicon.png">
 
     <!-- W3 flat ui -->
