@@ -7,7 +7,7 @@
                 </div>
                 <div class="card-body">
                     <?php foreach ($post as $post) : ?>
-                        <form action="<?= base_url(); ?>post/update/<?= $post['id_post'] ?>" method="POST">
+                        <form action="<?= base_url(); ?>post/prosesUpdate/<?= $post['id_post'] ?>" method="POST">
                             <div class="form-group">
                                 <label for="judul">Judul</label>
                                 <input type="text" class="form-control" id="judul" name="judul" placeholder="Masukan Judul" value="<?= $post['judul'] ?>" required>
