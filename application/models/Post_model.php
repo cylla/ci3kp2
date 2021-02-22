@@ -45,6 +45,17 @@ class Post_model extends CI_Model
             ->count_all_results();
     }
 
+    public function readPost($id)
+    {
+        $data = array(
+            'judul' => $this->input->post('judul', true),
+            'isi' => $this->input->post('isi', true)
+        );
+        $this->db
+            ->where('id_post', $id)
+            ->read('posts', $data);
+    }
+
     public function updatePost($id)
     {
         $data = array(

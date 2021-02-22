@@ -42,11 +42,6 @@
                 <li class="nav-item active mr-sm-2">
                     <a class="nav-link" href="<?php base_url() ?>about" id="navbar">Tentang Blog</a>
                 </li>
-                <?php if (logged_in()) : ?>
-                    <li class="nav-item active">
-                        <a class="nav-link" href="<?php base_url() ?>post/tambah" id="navbar">Kelola Artikel</a>
-                    </li>
-                <?php endif; ?>
             </ul>
             <form class="form-inline my-2 my-lg-0" method="POST" action="">
                 <input class="form-control mr-sm-2" type="search" placeholder="Cari judul.." name="keyword" autocomplete="off" aria-label="Search" id="search">

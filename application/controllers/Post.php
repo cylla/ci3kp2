@@ -11,6 +11,10 @@ class Post extends CI_Controller
         $this->load->library('form_validation');
     }
 
+    //halaman ini akan dijalankan pada:
+    //http://localhost/ci3kp/post
+    // atau:
+    // http://localhost/ci3kp/post/index
     public function index()
     {
         if ($this->session->userdata('keyword') == false) {
@@ -20,7 +24,7 @@ class Post extends CI_Controller
         $this->load->library('pagination');
 
         //CONFIG
-        $config['base_url'] = 'https://olahragahariini.herokuapp.com/post/index';
+        $config['base_url'] = 'http://localhost/ci3kp/post/index';
         // ^ untuk base url paginationnya
 
         if (isset($_POST['submit'])) {
@@ -132,6 +136,32 @@ class Post extends CI_Controller
             redirect('auth');
         }
     }
+
+    // public function prosesTambah()
+    // {
+    //     $this->Post_model->tambahPost();
+    //     echo "sukses menambahkan";
+    // }
+
+    public function read($id)
+    {
+        if (logged_in()) {
+            $data['judul'] = 'Olahraga Hari Ini';
+            $data['post'] = $this->Post_model->getPostById($id);
+
+            $this->form_validation->set_rules('judul', 'Judul Post', 'required');
+            $this->form_validation->set_rules('isi', 'Isi Post', 'required');
+            
+            if ($this->form_validation->run() == FALSE) {
+                $this->load->view('templates/header', $data);
+                $this->load->view('post/read', $data);
+                $this->load->view('templates/footer');
+            }
+        } else {
+            redirect('auth');
+        }
+    }
+
 
     // public function prosesTambah()
     // {
