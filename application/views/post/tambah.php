@@ -6,7 +6,7 @@
                     Tambah Post
                 </div>
                 <div class="card-body">
-                    <form action="<?= base_url() ?>post/prosesTambah" method="POST">
+                    <form action="<?= base_url() ?>post/mbah" method="POST">
                         <div class="form-group">
                             <label for="judul">Judul</label>
                             <input type="text" class="form-control" id="judul" name="judul" placeholder="Masukan Judul" required>
