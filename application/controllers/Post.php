@@ -11,10 +11,6 @@ class Post extends CI_Controller
         $this->load->library('form_validation');
     }
 
-    //halaman ini akan dijalankan pada:
-    //http://localhost/ci3kp/post
-    // atau:
-    // http://localhost/ci3kp/post/index
     public function index()
     {
         if ($this->session->userdata('keyword') == false) {
@@ -24,7 +20,7 @@ class Post extends CI_Controller
         $this->load->library('pagination');
 
         //CONFIG
-        $config['base_url'] = 'http://localhost/ci3kp/post/index';
+        $config['base_url'] = 'https://olahragahariini.herokuapp.com/post/index';
         // ^ untuk base url paginationnya
 
         if (isset($_POST['submit'])) {

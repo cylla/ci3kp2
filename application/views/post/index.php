@@ -24,9 +24,9 @@
         <div class="row">
             <?php if (isset($posts)) : ?>
                 <?php foreach ($posts as $post) : ?>
-                    <div class="col-md-6 mb-7">
-                        <h3 class="text-truncate"><?= $post['judul']; ?></h3>
-                        <p class="" style="-webkit-line-clamp:3; overflow:hidden; text-overflow:ellipsis; display: -webkit-box; -webkit-box-orient:vertical;"><?= $post['isi']; ?>
+                    <div class="col-md-8 mb-9">
+                        <h3 class="text-truncate mt-2"><?= $post['judul']; ?></h3>
+                        <p class="mt-2" style="-webkit-line-clamp:3; overflow:hidden; text-overflow:ellipsis; display: -webkit-box; -webkit-box-orient:vertical;"><?= $post['isi']; ?>
                         </p>
                         <a role="button" href="<?= base_url() ?>post/read/<?= $post['id_post'] ?>" class="btn btn-primary">Lihat &raquo;</a>
                         <?php if (logged_in()) : ?>
