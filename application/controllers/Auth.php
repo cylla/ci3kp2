@@ -22,7 +22,7 @@ class Auth extends CI_Controller
         $this->form_validation->set_rules('password', 'Password', 'required|trim|min_length[4]');
 
         if ($this->form_validation->run() == false) {
-            $data['judul'] = 'Sign In';
+            $data['judul'] = 'Login';
             $this->load->view('auth/templates/header', $data);
             $this->load->view('auth/login');
             $this->load->view('auth/templates/footer');
