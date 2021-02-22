@@ -6,20 +6,18 @@
                     Update Post
                 </div>
                 <div class="card-body">
-                    <?php foreach ($post as $post) : ?>
-                        <form action="<?= base_url(); ?>post/prosesUpdate/<?= $post['id_post'] ?>" method="POST">
-                            <div class="form-group">
-                                <label for="judul">Judul</label>
-                                <input type="text" class="form-control" id="judul" name="judul" placeholder="Masukan Judul" value="<?= $post['judul'] ?>" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="isi">Isi</label>
-                                <textarea class="form-control" name="isi" id="isi" placeholder="Masukkan Isi" required><?= $post['isi'] ?></textarea>
-                            </div>
-                            <button type="submit" class="btn btn-primary">Update</button>
-                            <a href="<?= base_url() ?>post" class="btn btn-secondary">Batal</a>
-                        </form>
-                    <?php endforeach; ?>
+                    <form action="<?= base_url(); ?>post/update/<?= $post['id_post'] ?>" method="POST">
+                        <div class="form-group">
+                            <label for="judul">Judul</label>
+                            <input type="text" class="form-control" name="judul" id="judul" placeholder="Masukkan Judul" value="<?= $post['judul'] ?>" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="isi">Isi </label>
+                            <textarea class="form-control" name="isi" id="isi" placeholder="Masukkan Isi" rows="3" required><?= $post['isi'] ?></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Update</button>
+                        <a href="<?= base_url() ?>post" class="btn btn-secondary">Batal</a>
+                    </form>
                 </div>
             </div>
         </div>
