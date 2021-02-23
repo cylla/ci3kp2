@@ -141,20 +141,16 @@ class Post extends CI_Controller
 
     public function read($id)
     {
-        if (logged_in()) {
-            $data['judul'] = 'Olahraga Hari Ini';
-            $data['post'] = $this->Post_model->getPostById($id);
+        $data['judul'] = 'Olahraga Hari Ini';
+        $data['post'] = $this->Post_model->getPostById($id);
 
-            $this->form_validation->set_rules('judul', 'Judul Post', 'required');
-            $this->form_validation->set_rules('isi', 'Isi Post', 'required');
-            
-            if ($this->form_validation->run() == FALSE) {
-                $this->load->view('templates/header', $data);
-                $this->load->view('post/read', $data);
-                $this->load->view('templates/footer');
-            }
-        } else {
-            redirect('auth');
+        $this->form_validation->set_rules('judul', 'Judul Post', 'required');
+        $this->form_validation->set_rules('isi', 'Isi Post', 'required');
+
+        if ($this->form_validation->run() == FALSE) {
+            $this->load->view('templates/header', $data);
+            $this->load->view('post/read', $data);
+            $this->load->view('templates/footer');
         }
     }
 
